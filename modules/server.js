@@ -17,8 +17,8 @@ server.use(function (req, res, next) {
 });
 
 const freeTier = restify.throttle({
-    rate: 3,
-    burst: 10,
+    rate: 10,
+    burst: 100,
     xff: true,
     overrides: {
         '192.168.1.1': {
